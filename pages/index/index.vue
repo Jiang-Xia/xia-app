@@ -1,5 +1,8 @@
 <template>
 	<view class="content">
+		<u-navbar :is-back="true" title="首页"
+		 :background="background">
+		</u-navbar>
 		<image class="logo" src="/static/logo.png"></image>
 		<view class="text-area">
 			<text class="title">{{title}}</text>
@@ -11,7 +14,18 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello xia'
+				title: 'Hello xia',
+				background: {
+					// backgroundColor: '#001f3f',
+					
+					// 导航栏背景图
+					// background: 'url(https://cdn.uviewui.com/uview/swiper/1.jpg) no-repeat',
+					// 还可以设置背景图size属性
+					// backgroundSize: 'cover',
+					
+					// 渐变色
+					backgroundImage: 'linear-gradient(45deg, rgb(28, 187, 180), rgb(141, 198, 63))'
+				}
 			}
 		},
 		onLoad() {

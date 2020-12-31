@@ -1,4 +1,7 @@
 {
+	"easycom": {
+			"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+		},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		// 首页-组件
 		{
@@ -33,7 +36,9 @@
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "Xia",
 		"navigationBarBackgroundColor": "#FFFFFF",
-		"backgroundColor": "#FFFFFF"
+		"backgroundColor": "#FFFFFF",
+		"navigationStyle": "custom" ,// 隐藏系统导航栏
+		"navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
 	},
 	"tabBar": {
 		"color": "#909399",
