@@ -1,12 +1,20 @@
 <template>
-	<view class="content">
-		<u-navbar :is-back="true" title="首页"
-		 :background="background">
+	<view>
+		<u-navbar 
+		:is-back="false" 
+		title="首页"
+		title-color="#fff"
+		back-icon-color="#fff"
+		:back-text-style="{color:'#fff'}" 
+		:background="{backgroundColor:'#fc5185'}">
 		</u-navbar>
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
+		<!-- <image class="logo" src="/static/logo.png"></image> -->
+<!-- 		<view class="text-area">
 			<text class="title">{{title}}</text>
-		</view>
+		</view> -->
+		<view class="wrap">
+				<u-swiper :list="list"></u-swiper>
+			</view>
 	</view>
 </template>
 
@@ -25,7 +33,20 @@
 					
 					// 渐变色
 					backgroundImage: 'linear-gradient(45deg, rgb(28, 187, 180), rgb(141, 198, 63))'
-				}
+				},
+				list: [{
+								image: 'https://cdn.uviewui.com/uview/swiper/1.jpg',
+								title: '昨夜星辰昨夜风，画楼西畔桂堂东'
+							},
+							{
+								image: 'https://cdn.uviewui.com/uview/swiper/2.jpg',
+								title: '身无彩凤双飞翼，心有灵犀一点通'
+							},
+							{
+								image: 'https://cdn.uviewui.com/uview/swiper/3.jpg',
+								title: '谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳'
+							}
+						],
 			}
 		},
 		onLoad() {
@@ -53,7 +74,9 @@
 		margin-right: auto;
 		margin-bottom: 50rpx;
 	}
-
+	.wrap {
+			padding: 40rpx;
+		}
 	.text-area {
 		display: flex;
 		justify-content: center;

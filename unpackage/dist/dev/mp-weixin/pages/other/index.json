@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "其他",
+  "usingComponents": {
+    "u-navbar": "/uview-ui/components/u-navbar/u-navbar"
+  }
+}

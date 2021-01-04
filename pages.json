@@ -33,41 +33,40 @@
 		}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
+		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "Xia",
 		"navigationBarBackgroundColor": "#FFFFFF",
 		"backgroundColor": "#FFFFFF",
-		"navigationStyle": "custom" ,// 隐藏系统导航栏
-		"navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+		"navigationStyle": "custom" // 隐藏系统导航栏
 	},
 	"tabBar": {
 		"color": "#909399",
-		"selectedColor": "#303133",
+		"selectedColor": "#fc5185",
 		"backgroundColor": "#FFFFFF",
 		"borderStyle": "black",
-		"show-icon":false,
+		"show-icon":true,
 		"list": [{
 				"pagePath": "pages/index/index",
-				// "iconPath": "static/uview/example/component.png",
-				// "selectedIconPath": "static/uview/example/component_select.png",
+				"iconPath": "static/img/tabbar/首页.png",
+				"selectedIconPath": "static/img/tabbar/首页-active.png",
 				"text": "首页"
 			},
 			{
 				"pagePath": "pages/example/index",
-				// "iconPath": "static/uview/example/js.png",
-				// "selectedIconPath": "static/uview/example/js_select.png",
+				"iconPath": "static/img/tabbar/例子.png",
+				"selectedIconPath": "static/img/tabbar/例子-active.png",
 				"text": "例子"
 			},
 			{
 				"pagePath": "pages/other/index",
-				// "iconPath": "static/uview/example/js.png",
-				// "selectedIconPath": "static/uview/example/js_select.png",
+				"iconPath": "static/img/tabbar/其他.png",
+				"selectedIconPath": "static/img/tabbar/其他-active.png",
 				"text": "其他"
 			},
 			{
 				"pagePath": "pages/my/index",
-				// "iconPath": "static/uview/example/template.png",
-				// "selectedIconPath": "static/uview/example/template_select.png",
+				"iconPath": "static/img/tabbar/我的.png",
+				"selectedIconPath": "static/img/tabbar/我的-active.png",
 				"text": "我的"
 			}
 		]
