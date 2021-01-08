@@ -2,6 +2,6 @@
   "navigationBarTitleText": "例子",
   "usingComponents": {
     "u-navbar": "/uview-ui/components/u-navbar/u-navbar",
-    "u-parse": "/uview-ui/components/u-parse/u-parse"
+    "u-search": "/uview-ui/components/u-search/u-search"
   }
 }

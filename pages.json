@@ -15,7 +15,15 @@
 			"path": "pages/example/index",
 			"style": {
 				"navigationBarTitleText": "例子"
-			}
+			},
+			"pages":[
+					{
+						"path": "search",
+						"style": {
+							"navigationBarTitleText": "搜索"
+						}
+					}
+				]
 		},
 		// 其他-组件
 		{
@@ -32,6 +40,19 @@
 			}
 		}
 	],
+	// "subPackages":[
+	// 	{
+	// 		"root":"pages/example",
+	// 		"pages":[
+	// 				{
+	// 					"path": "search/index",
+	// 					"style": {
+	// 						"navigationBarTitleText": "搜索"
+	// 					}
+	// 				}
+	// 			]
+	// 	}
+	// ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "Xia",

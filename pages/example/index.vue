@@ -8,7 +8,9 @@
 		back-icon-color="#fff"
 		:background="{backgroundColor:'#fc5185'}"
 		></u-navbar>
-		<u-parse :html="content"></u-parse>
+		<view class="example-wrap">
+			<u-search :disabled="true" placeholder="请输入基金编码或名称搜索" :show-action="false" @click="gotoSearch"></u-search>
+		</view>
 	</view>
 </template>
 
@@ -16,18 +18,32 @@
 	export default {
 		data() {
 			return {
-				content: `
-					<p>露从今夜白，月是故乡明</p>
-					<p style='color:red; font-size:20px;'><b>仅可以使用复姓！！</b></p>
-					<img src="https://cdn.uviewui.com/uview/swiper/2.jpg" />
-				`
 			}
 		},
+		methods:{
+			gotoSearch(){
+				uni.navigateTo({url:'search/index'})
+			}
+		}
 	}
 </script>
 
 <style lang="scss" scoped>
-	.u-content {
-		margin-top: 100rpx;
+.example-wrap {
+	padding: 20rpx 30rpx ;
+		.u-search{
+		}
+		.scroll-wrap{
+			height: 300rpx;
+			color: #303133;
+			transition: .3;
+		}
+		.fund-item{
+			padding: 10rpx 30rpx;
+			border-bottom: 1px solid #F3F4F6;
+		}
+		.fund-item:hover{
+			background-color: #F3F4F6;
+		}
 	}
 </style>

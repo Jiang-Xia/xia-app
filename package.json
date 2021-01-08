@@ -1,0 +1,23 @@
+{
+  "name": "xia-app",
+  "version": "1.0.0",
+  "description": "xia-app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jiang-Xia/xia-app.git"
+  },
+  "keywords": [
+    "xia-app"
+  ],
+  "author": "xia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jiang-Xia/xia-app/issues"
+  },
+  "homepage": "https://github.com/Jiang-Xia/xia-app#readme",
+  "dependencies": {}
+}
