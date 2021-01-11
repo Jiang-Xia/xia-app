@@ -15,15 +15,13 @@
 			"path": "pages/example/index",
 			"style": {
 				"navigationBarTitleText": "例子"
-			},
-			"pages":[
-					{
-						"path": "search",
-						"style": {
-							"navigationBarTitleText": "搜索"
-						}
-					}
-				]
+			}
+		},
+		{
+			"path": "pages/example/search",
+			"style": {
+				"navigationBarTitleText": "搜索"
+			}
 		},
 		// 其他-组件
 		{

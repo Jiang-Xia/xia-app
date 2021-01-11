@@ -5,6 +5,7 @@
 		:is-back="true" 
 		title="搜索" 
 		title-color="#fff"
+		:custom-back="customBack"
 		back-icon-color="#fff"
 		:background="{backgroundColor:'#fc5185'}"
 		></u-navbar>
@@ -37,8 +38,9 @@
 					this.allFundList=res.data
 				})
 			},
-			gotoSearch(){
-				
+			customBack(){
+				console.log('pages/example/index')
+				uni.navigateBack({url:'pages/example/index'})
 			},
 			// 联想基金名称
 			searchHandle(val){
@@ -60,6 +62,7 @@
 <style lang="scss" scoped>
 .example-wrap {
 	padding: 20rpx 30rpx ;
+	font-size: 13px;
 		.u-search{
 		}
 		.scroll-wrap{

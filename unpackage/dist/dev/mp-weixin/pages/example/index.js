@@ -180,7 +180,7 @@ var _default =
   },
   methods: {
     gotoSearch: function gotoSearch() {
-      uni.navigateTo({ url: 'search/index' });
+      uni.navigateTo({ url: 'pages/example/search' });
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

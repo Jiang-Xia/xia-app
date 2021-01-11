@@ -22,7 +22,7 @@
 		},
 		methods:{
 			gotoSearch(){
-				uni.navigateTo({url:'search/index'})
+				uni.navigateTo({url:'pages/example/search'})
 			}
 		}
 	}
