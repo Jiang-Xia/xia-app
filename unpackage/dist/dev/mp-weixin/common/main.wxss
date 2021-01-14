@@ -14,4 +14,8 @@
 
 
 /*每个页面公共css */
+.uni-body{
+	background-color: #f4f4f5;
+}
+
 

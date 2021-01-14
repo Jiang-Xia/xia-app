@@ -19,5 +19,7 @@
     "url": "https://github.com/Jiang-Xia/xia-app/issues"
   },
   "homepage": "https://github.com/Jiang-Xia/xia-app#readme",
-  "dependencies": {}
+  "dependencies": {
+    "vconsole": "^3.3.4"
+  }
 }

@@ -2,9 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/example/index",
-    "pages/example/search",
     "pages/other/index",
-    "pages/my/index"
+    "pages/my/index",
+    "pages/found/index",
+    "pages/found/search"
   ],
   "subPackages": [],
   "window": {

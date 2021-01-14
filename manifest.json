@@ -86,13 +86,22 @@
         "devServer" : {
             "https" : false,
             "port" : 5006,
-						"proxy": {
-								"/": {
-									"target": "http://fund.eastmoney.com",
-									"changeOrigin": true,
-									"secure": false
+            "proxy" : {
+                "/proxy-api" : {
+                    "target" : "https://fundsuggest.eastmoney.com",
+                    "changeOrigin" : true,
+										"pathRewrite": {
+											"^/proxy-api": ""
+										}
+                },
+								"/push-api" : {
+								    "target" : "https://push2.eastmoney.com",
+								    "changeOrigin" : true,
+										"pathRewrite": {
+											"^/push-api": ""
+										}
 								}
-							}
+            }
         },
         "uniStatistics" : {
             "enable" : false

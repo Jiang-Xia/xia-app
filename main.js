@@ -2,6 +2,10 @@ import Vue from 'vue'
 import App from './App'
 Vue.config.productionTip = false
 import uView from "uview-ui";
+import VConsole from 'vconsole'
+if(process.env.NODE_ENV==='development'){
+	 new VConsole();
+}
 // import axios from 'axios'
 // Vue.prototype.$axios = axios
 import ajax from '@/utils/common/ajax.js'

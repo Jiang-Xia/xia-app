@@ -17,12 +17,6 @@
 				"navigationBarTitleText": "例子"
 			}
 		},
-		{
-			"path": "pages/example/search",
-			"style": {
-				"navigationBarTitleText": "搜索"
-			}
-		},
 		// 其他-组件
 		{
 			"path": "pages/other/index",
@@ -35,6 +29,18 @@
 			"path": "pages/my/index",
 			"style": {
 				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/found/index",
+			"style": {
+				"navigationBarTitleText": "基金"
+			}
+		},
+		{
+			"path": "pages/found/search",
+			"style": {
+				"navigationBarTitleText": "搜索"
 			}
 		}
 	],
