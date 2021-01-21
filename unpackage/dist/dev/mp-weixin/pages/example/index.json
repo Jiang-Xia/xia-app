@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "例子",
-  "usingComponents": {
-    "u-navbar": "/uview-ui/components/u-navbar/u-navbar",
-    "u-cell-group": "/uview-ui/components/u-cell-group/u-cell-group",
-    "u-cell-item": "/uview-ui/components/u-cell-item/u-cell-item"
-  }
-}

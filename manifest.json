@@ -90,17 +90,17 @@
                 "/proxy-api" : {
                     "target" : "https://fundsuggest.eastmoney.com",
                     "changeOrigin" : true,
-										"pathRewrite": {
-											"^/proxy-api": ""
-										}
+                    "pathRewrite" : {
+                        "^/proxy-api" : ""
+                    }
                 },
-								"/push-api" : {
-								    "target" : "https://push2.eastmoney.com",
-								    "changeOrigin" : true,
-										"pathRewrite": {
-											"^/push-api": ""
-										}
-								}
+                "/push-api" : {
+                    "target" : "https://push2.eastmoney.com",
+                    "changeOrigin" : true,
+                    "pathRewrite" : {
+                        "^/push-api" : ""
+                    }
+                }
             }
         },
         "uniStatistics" : {

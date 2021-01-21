@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "我的",
-  "usingComponents": {
-    "u-navbar": "/uview-ui/components/u-navbar/u-navbar"
-  }
-}

@@ -71,16 +71,10 @@
 		onLoad(option) {
 			// console.log(option)
 			if(!this.allFundList.length){
-				// this.getAllFound()
 			}
 
 		},
 		methods:{
-			getAllFound(){
-				this.$u.get('https://api.doctorxiong.club/v1/fund/all').then(res=>{
-					this.allFundList=res.data||[]
-				})
-			},
 			// 获取基本详情信息
 			getFoundDetail(code){
 				const fundlist = [code].join()
@@ -91,14 +85,18 @@
 				this.$u.get(url).then(res=>{
 					this.foundDetail=res.Datas[0]
 				})
+				
 			},
 			customBack(){
 				uni.reLaunch({url:'/pages/found/index'})
 			},
 			// 联想基金名称
 			changeHandle(val){
-				const url= "/proxy-api/FundSearch/api/FundSearchAPI.ashx?&m=9&key=" +
-				          val +"&_=" +new Date().getTime();
+				let ip = '/proxy-api'
+				// #ifdef MP-WEIXIN
+				 ip = 'https://fundsuggest.eastmoney.com'
+				// #endif
+				const url= ip+"/FundSearch/api/FundSearchAPI.ashx?&m=9&key=" +val +"&_=" +new Date().getTime();
 				this.$u.get(url).then(res=>{
 					this.filterList = res.Datas
 					this.showFilter = true

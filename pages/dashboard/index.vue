@@ -11,7 +11,7 @@
 		<view class="index-wrap">
 			<view class="border-wrap">
 			</view>
-			<u-search :clearabled="true" :show-action="false"></u-search>
+			<u-search :clearabled="true" disabled :show-action="false"></u-search>
 			<u-swiper :list="list"></u-swiper>
 			</view>
 	</view>

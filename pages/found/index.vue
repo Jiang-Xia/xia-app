@@ -15,7 +15,7 @@
 			<u-cell-group slot="body" >
 					<u-cell-item 
 					v-for="(item,index) of stockList"
-					:key="item.f12+index"
+					:key="item.f12"
 					:title="item.f14"
 					:arrow="false" >
 						<u-tag
@@ -32,7 +32,7 @@
 		<u-cell-group style="margin:30rpx;width:auto;">
 				<u-cell-item
 				v-for="(item,index) of myFoundList"
-				:key="item.FCODE+index"
+				:key="item.FCODE"
 				:title="item.SHORTNAME"
 				:arrow="false" >
 					<u-tag
@@ -98,7 +98,7 @@
 			getStockUrl(){
 				const seciList = ['1.000001','1.000300','0.399001','0.399006']
 				const seciListStr = seciList.join()
-				let url ="/push-api/api/qt/ulist.np/get?fltt=2&fields=f2,f3,f4,f12,f13,f14&secids=" +
+				let url ="https://push2.eastmoney.com/api/qt/ulist.np/get?fltt=2&fields=f2,f3,f4,f12,f13,f14&secids=" +
 				       seciListStr +
 				       "&_=" +new Date().getTime();
 				return url
@@ -111,7 +111,7 @@
 				})
 				this.timeInter = setTimeout(() => {
 				  this.getStockDetail()
-				}, 100000)
+				}, 3000)
 			},
 			// 获取持有基金数据
 			getFoundDetail(){

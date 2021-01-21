@@ -1,17 +1,22 @@
 import Vue from 'vue'
 import App from './App'
+
 Vue.config.productionTip = false
+
+App.mpType = 'app'
+
 import uView from "uview-ui";
-import VConsole from 'vconsole'
-if(process.env.NODE_ENV==='development'){
-	 new VConsole();
-}
-// import axios from 'axios'
-// Vue.prototype.$axios = axios
+Vue.use(uView);
+
+// import VConsole from './static/js/common/vconsole.min.js'
+
+// const VConsole = require('./static/js/common/vconsole.min.js')
+// if(process.env.NODE_ENV==='development'){
+	
+// 	 var vconsole = new VConsole();
+// }
 import ajax from '@/utils/common/ajax.js'
 Vue.prototype.$ajax = ajax
-Vue.use(uView);
-App.mpType = 'app'
 
 const app = new Vue({
     ...App
