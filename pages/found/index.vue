@@ -11,22 +11,38 @@
 		></u-navbar>
 		
 		<u-search :disabled="true" placeholder="请输入基金编码或名称搜索" :show-action="false" @click="gotoSearch"></u-search>
-		<u-card  title="大盘信息" :sub-title="subTitle" >
-			<u-cell-group slot="body" >
-					<u-cell-item 
-					v-for="(item,index) of stockList"
-					:key="item.f12"
-					:title="item.f14"
-					:arrow="false" >
-						<u-tag
-						style="width: 80%;text-align: left;"
-						:text="''+item.f2+' '+item.f4+' '+item.f3+' %'" 
+		<view class="push-title">
+			大盘指数：
+			<text>({{subTitle}})</text>
+		</view>
+		<view class="push-wrap">
+			<view
+				class="stock-card"
+				v-for="(item,index) of stockList"
+				:key="item.f12">
+				<text class="stock-title">{{item.f14}}</text>
+				<view>
+					<u-tag
+						style="display: block; text-align: center; margin-bottom: 8rpx;"
+						:text="item.f2" 
+						shape="circle"
+						:type="item.f3<0?'success':'error'"
+					/>
+					<u-tag
+						style="width: 50%;text-align: right; border-right:none;"
+						:text="item.f4" 
+						shape="circleLeft"
+						:type="item.f3<0?'success':'error'"
+					/>
+					<u-tag
+						style="width: 50%;text-align: left;"
+						:text="item.f3+' %'" 
 						shape="circleRight"
 						:type="item.f3<0?'success':'error'"
-						/>
-					</u-cell-item>
-				</u-cell-group>
-		</u-card>
+					/>
+				</view>
+			</view>
+		</view>
 		
 		<!-- 我的自选 -->
 		<u-cell-group style="margin:30rpx;width:auto;">
@@ -43,20 +59,6 @@
 					/>
 				</u-cell-item>
 		</u-cell-group>
-<!-- 		<u-grid :col="3">
-				<u-grid-item>
-					<u-icon name="photo" :size="46"></u-icon>
-					<view class="grid-text">图片</view>
-				</u-grid-item>
-				<u-grid-item>
-					<u-icon name="lock" :size="46"></u-icon>
-					<view class="grid-text">锁头</view>
-				</u-grid-item>
-				<u-grid-item>
-					<u-icon name="hourglass" :size="46"></u-icon>
-					<view class="grid-text">沙漏</view>
-				</u-grid-item>
-				</u-grid> -->
 	</view>
 </template>
 
@@ -111,7 +113,7 @@
 				})
 				this.timeInter = setTimeout(() => {
 				  this.getStockDetail()
-				}, 3000)
+				}, 300000)
 			},
 			// 获取持有基金数据
 			getFoundDetail(){
@@ -133,12 +135,41 @@
 	}
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .found-wrap {
 	padding-bottom: 40rpx;
-		.u-search{
-				padding: 40rpx 30rpx;
-				background-color: #FFFFFF;
+	.push-title{
+		font-weight: 600;
+		font-size: 32rpx;
+		line-height: 1.5;
+		padding: 10rpx 24rpx;
+		text{
+			font-weight: normal;
+			font-size: 28rpx;
+			color: #C0C4CC;
 		}
+	}
+	.push-wrap{
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		padding: 10rpx;
+	}
+	.stock-title{
+		font-weight: 600;
+		font-size: 28rpx;
+		line-height: 1.5;
+	}
+	.stock-card{
+		width: 45%;
+		margin-bottom: 16rpx;
+	}
+	.u-card{
+		width: 45%;
+	}
+	.u-search{
+			padding: 40rpx 30rpx;
+			background-color: #FFFFFF;
+	}
 	}
 </style>

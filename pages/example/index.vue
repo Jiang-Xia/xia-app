@@ -8,10 +8,17 @@
 		back-icon-color="#fff"
 		:background="{backgroundColor:'#fc5185'}"
 		></u-navbar>
+		
 		<u-cell-group title="功能">
 			<u-cell-item 
 			@click="clickItemHandle('found')"
-			icon="" title="基金信息" hover-class="cell-hover-class">
+			title="基金信息" 
+			>
+			</u-cell-item>
+			<u-cell-item
+			@click="clickItemHandle('found')"
+			title="基金信息" 
+			>
 			</u-cell-item>
 		</u-cell-group>
 	</view>

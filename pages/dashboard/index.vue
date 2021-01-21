@@ -6,6 +6,7 @@
 		title-color="#fff"
 		back-icon-color="#fff"
 		:back-text-style="{color:'#fff'}" 
+		:border-bottom="false"
 		:background="{backgroundColor:'#fc5185'}">
 		</u-navbar>
 		<view class="index-wrap">
@@ -48,10 +49,11 @@
 <style lang="scss">
 	.index-wrap {
 		padding: 10rpx 30rpx ;
+		position: relative;
 			.border-wrap{
 				background-color:#fc5185 ;
 				border-radius: 0 0 20px 20px;
-				height: 300rpx;
+				height: 250rpx;
 				position: absolute;
 				top: 0;
 				left: 0;

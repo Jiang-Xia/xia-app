@@ -139,7 +139,7 @@
 	}
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .search-content {
 	height: 100%;
 	// padding: 20rpx 30rpx ;
