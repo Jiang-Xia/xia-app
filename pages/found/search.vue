@@ -15,9 +15,12 @@
 			@change="changeHandle"
 			@search="searchHandle"
 			></u-search>
-			<scroll-view class="scroll-wrap" :scroll-y="true" v-show="showFilter">
+			<scroll-view class="scroll-wrap" :scroll-y="true" >
 				<view @touchend="clickItemHandle(item)" class="fund-item" v-for="(item,index) in filterList" :key="index">
 					{{item.NAME}}
+					<u-button type="primary" size="mini" shape="square" hair-line plain @click="addMyChoice({FCODE:item.CODE})">
+						<u-icon name="star" ></u-icon>加自选
+					</u-button>
 				</view>
 			</scroll-view>
 			
@@ -99,7 +102,6 @@
 				const url= ip+"/FundSearch/api/FundSearchAPI.ashx?&m=9&key=" +val +"&_=" +new Date().getTime();
 				this.$u.get(url).then(res=>{
 					this.filterList = res.Datas
-					this.showFilter = true
 				})
 			},
 			searchHandle(val){
@@ -107,7 +109,6 @@
 			},
 			// 点击item
 			clickItemHandle(item){
-				this.showFilter = false
 				this.getFoundDetail(item.CODE)
 			},
 			// 添加我的自选
@@ -154,7 +155,7 @@
 			transition: .3;
 		}
 		.fund-item{
-			padding: 10rpx 30rpx;
+			padding: 10rpx 40rpx;
 			border-bottom: 1px solid #F3F4F6;
 			background-color: #FFFFFF;
 		}
